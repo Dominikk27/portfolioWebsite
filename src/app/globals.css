@@ -2,11 +2,6 @@
 
 @theme{
   
-  /*==== BREAK POINTS ====*/
-  --breakpoint-desktop: 1280px;
-  --breakpoint-tablet: 900px;
-
-
   /*==== COLORS ====*/
   --color-sand: #CCC5B9;
   --color-cream: #FFFCF2;
@@ -20,9 +15,15 @@
   --font-display-h1: "Epilogue";
   --text-display-h1: 3.25rem;
   --leading-display-h1: 1.2;
+  --text-display-h1-weight: 900;
 
   --text-md-h1: 3rem;
   --text-md-para: 1.2rem;
+
+  --font-project-title: "Epilogue";
+  --text-project-title: 2rem;
+  --text-project-description: 1.2rem;
+  --font-project-description: "Lato";
 
   --text-xl-h1: 3.2rem;
   --text-xl-h4: 1.8rem;
@@ -72,6 +73,7 @@
   .font-display-h1 {
     font-family: var(--font-display-h1);
     font-size: var(--text-display-h1);
+    font-weight: var(--text-display-h1-weight);
     line-height: var(--leading-display-h1);
   }
 

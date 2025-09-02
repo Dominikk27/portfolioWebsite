@@ -21,6 +21,7 @@ const About = () => {
           className='absolute top-0 left-0'
           width={577}
           height={618}
+          alt=""
           src="/shapes/dotsOverlay.svg" />
           <Elipse className='fill-accent absolute top-0 opacity-85' />
           
