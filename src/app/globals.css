@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme{
+  
+  /*==== BREAK POINTS ====*/
+  --breakpoint-desktop: 1280px;
+  --breakpoint-tablet: 900px;
+
+
+  /*==== COLORS ====*/
+  --color-sand: #CCC5B9;
+  --color-cream: #FFFCF2;
+  --color-accent: #EB5E28;
+  --color-ink: #041B1C;
+  --color-charcoal: #252422;
+
+
+  
+  /*==== FONTS ====*/
+  --font-display-h1: "Epilogue";
+  --text-display-h1: 3.25rem;
+  --leading-display-h1: 1.2;
+
+  --text-md-h1: 3rem;
+  --text-md-para: 1.2rem;
+
+  --text-xl-h1: 3.2rem;
+  --text-xl-h4: 1.8rem;
+  --text-xl-para: 1.4rem;
+  --text-md-para: 1.2rem;
+
+  --text-phone-h1: 2.8rem;
+  --text-phone-h2: 1.75rem;
+  --text-phone-h3: 1.25rem;
+  
+  --text-phone-h4: 1.2rem;
+  --leading-phone-h4: 1;
+  --font-text-h4: "Epilogue";
+  --text-text-h4: 1.25rem;
+
+  --font-para-med: "Lato";
+  --text-para-med: 1.25rem;
+
+  --font-contentSmall: "Lato";
+  --font-contentSmall: 0.9375rem;
+
+  --font-buttons: "Lato";
+  --text-buttons: 1.25rem;
+  --font-buttons-weight: 600;
+
+
+
+
+}
+
+.icon{
+  width: 2rem;
+  height: 2rem;
+}
+
+@layer base{
+  body{
+    background-color: var(--color-charcoal);
+  }
+
+  .container{
+    width: 100%;
+    height: auto;
+    padding:  5rem 0;
+  }
+
+  .font-display-h1 {
+    font-family: var(--font-display-h1);
+    font-size: var(--text-display-h1);
+    line-height: var(--leading-display-h1);
+  }
+
+  .btn-text {
+    font-family: var(--font-buttons);
+    font-size: var(--text-buttons);
+    font-weight: var(--font-buttons-weight);
+  }
+}
