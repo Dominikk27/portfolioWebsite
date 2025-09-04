@@ -7,6 +7,7 @@ import About from "@/app/components/About";
 import Experience from "@/app/components/Experience";
 import Education from "@/app/components/Education";
 import Projects from "@/app/components/Projects";
+import Navigation from "@/app/components/Navigation";
 
 
 
@@ -14,11 +15,12 @@ export default function Home() {
 
   return (
     <>
-      <About />
-      <Skills />
-      <Education />
-      <Experience />
-      <Projects />
+      <Navigation />
+      <About section={"about"}/>
+      <Skills section={"skills"}/>
+      <Education section={"education"}/>
+      <Experience section={"experience"}/>
+      <Projects section={"projects"}/>
     </>
   );
 }

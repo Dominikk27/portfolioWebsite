@@ -2,6 +2,10 @@
 import { HtmlIcon, CssIcon, ReactIcon, NodeIcon, CppIcon, PythonIcon, FlutterIcon, MongoIcon, MysqlIcon, UnityIcon, VisualIcon, CsharpIcon } from "@/app/components/svg/icons";
 import SkillBar from "@/app/components/ui/skillBar";
 
+import { rtlFadeIn, bttFadeIn, ttbFadeIn, ltrFadeIn, skillsTable } from "@/app/components/animations/animations";
+
+import { AnimatePresence, motion } from 'motion/react';
+
 
 export const SkillsProps =[
     {Icon: HtmlIcon, percentage: 80},
@@ -39,14 +43,31 @@ export const IconsInsideElipse = [
     { Icon: VisualIcon, angle: 180 },
   ]
 
-const Skills = () => {
+const Skills = ({ section }) => {
   return (
-    <div className="container grid grid-cols-1 justify-start items-start mx-auto gap-[2.5rem] px-4
+    <motion.section
+      initial={{opacity: 0}}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        delay: 0.2,
+      }}
+      id={section} className="container min-h-screen grid grid-cols-1 justify-start items-start mx-auto gap-[2.5rem] px-4
                     sm:grid-cols-4 sm:max-w-[480]
                     md:grid-cols-8 md:max-w-[890] md:gap-[2rem] md:justify-center md:items-center
                     lg:grid-cols-12 lg:max-w-[1190px]
                     xl:grid-cols-12 xl:max-w-[1280px]">
-      <div className="relative flex justify-center items-center mx-auto scale-90
+      <motion.div 
+        initial={{ x: 300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        exit={{ x: 300, opacity: 0 }}
+        transition={{
+          delay: 0.2,
+          duration: 1,
+          type: "spring", 
+          stiffness: 100 
+        }}
+        viewport={{once: true, amount: 0.1 }}
+        className="relative flex justify-center items-center mx-auto scale-90
                       sm:col-span-4 sm:scale-100 
                       md:col-span-4 md:order-2 
                       lg:col-span-6 lg:order-2 lg:scale-140
@@ -100,28 +121,46 @@ const Skills = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
+      
 
       {/* CONTENT */}
       <div className="w-full flex flex-col
                       sm:col-span-4
                       md:col-span-4 md:order-1
                       lg:col-span-6 lg:order-1">
-        <h1 className='font-display-h1 text-white
+        <motion.h1 
+          variants={ltrFadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1 }}
+          className='font-display-h1 text-white
                        text-[3rem]
                        md:text-md-h1
-                       xl:text-xl-h1'>My <span className='text-accent'>Toolkit</span></h1>
-        <p className="w-full text-left text-white text-md-para font-para-med">These are the tools and technologies I use most. I enjoy learning new ones and improving how I work on every project.</p>
-        <div className="mt-4 grid grid-flow-col justify-center auto-cols-max grid-rows-6 gap-x-[1rem] gap-y-[0.31rem] 
+                       xl:text-xl-h1'>My <span className='text-accent'>Toolkit</span></motion.h1>
+        <motion.p 
+          variants={ltrFadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1 }}
+          className="w-full text-left text-white text-md-para font-para-med">These are the tools and technologies I use most. I enjoy learning new ones and improving how I work on every project.</motion.p>
+        <motion.div 
+          variants={skillsTable}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1}}
+          className="mt-4 grid grid-flow-col justify-center auto-cols-max grid-rows-6 gap-x-[1rem] gap-y-[0.31rem] 
                         md:grid-rows-6 md:justify-center
                         lg:grid-rows-4 lg:justify-start">
           {SkillsProps.map((skill, index) =>
-            <SkillBar key={index} Icon={skill.Icon} percentage={skill.percentage} index={index} />
+            <motion.div key={index} variants={bttFadeIn} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.1 }}>
+              <SkillBar Icon={skill.Icon} percentage={skill.percentage} index={index} />
+            </motion.div>
           )}
-        </div>
+        </motion.div>
       </div>
       
-    </div>
+    </motion.section>
   )
 }
 

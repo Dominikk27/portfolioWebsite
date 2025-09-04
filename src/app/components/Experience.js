@@ -1,9 +1,12 @@
 import React from 'react'
 
+import { motion, hover } from 'motion/react';
+
 import { TbSettings } from "react-icons/tb";
 import { FaDesktop } from "react-icons/fa";
 import { FiGlobe } from "react-icons/fi";
 import { IoWarningOutline } from "react-icons/io5";
+import { bttFadeIn, ltrFadeIn } from './animations/animations';
 
 
 const ExperienceSections = [
@@ -45,9 +48,15 @@ const ExperienceSections = [
   }
 ];
 
-const Experience = () => {
+const Experience = ({ section }) => {
   return (
-    <div className="container grid grid-cols-1 justify-center items-center mx-auto gap-[1.38rem] px-4
+    <motion.section 
+      initial={{opacity: 0}}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        delay: 0.2,
+      }}
+      id={section} className="container min-h-screen grid grid-cols-1 justify-center items-center mx-auto gap-[1.38rem] px-4
                     sm:grid-cols-4
                     md:grid-cols-8 md:max-w-[890] md:gap-[2rem] md:justify-center md:items-center
                     lg:grid-cols-12 lg:max-w-[1190px]
@@ -56,15 +65,30 @@ const Experience = () => {
                       sm:col-span-4
                       md:col-span-7
                       lg:col-span-8">
-        <h1 className='font-display-h1 text-white
+        <motion.h1 
+          variants={ltrFadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1}}
+          className='font-display-h1 text-white
                        text-phone-h1
                        md:text-md-h1
-                       xl:text-xl-h1'>My <span className='text-accent'>Experience</span></h1>
-        <p className='text-white text-center text-para-med font-para-med
+                       xl:text-xl-h1'>My <span className='text-accent'>Experience</span></motion.h1>
+        <motion.p 
+          variants={ltrFadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1}}
+          className='text-white text-center text-para-med font-para-med
                           md:text-justify md:text-md-para
-                          xl:text-xl-para'>I have gained valuable experience in IT, where I apply my knowledge in practice, improve my technical skills, and contribute to solving real-world problems.</p>
+                          xl:text-xl-para'>I have gained valuable experience in IT, where I apply my knowledge in practice, improve my technical skills, and contribute to solving real-world problems.</motion.p>
       </div>
-      <div className="flex col-span-1 justify-center
+      <motion.div 
+        variants={bttFadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1}}
+        className="flex col-span-1 justify-center
                       sm:col-span-4
                       md:col-span-5
                       lg:col-span-7 lg:justify-start">
@@ -94,18 +118,29 @@ const Experience = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="col-span-1 flex justify-center
                       sm:col-span-4 sm:justify-end
                       md:col-span-3 md:justify-end
                       lg:col-span-5 lg:justify-center">
-        <img src="./avatars/experience.png" alt="Avatar with experience" 
+        <motion.img 
+          initial={{ x: 500, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -500, opacity: 0 }}
+        transition={{
+          delay: 0.2,
+          duration: 1,
+          type: "spring", 
+          stiffness: 100 
+        }}
+        viewport={{once: false, amount: 0.1 }}
+          src="./avatars/experience.png" alt="Avatar with experience" 
              className='rounded-b-2xl w-[13.75rem] h-[17.7rem]
                         sm:w-[16.8rem] sm:h-[21.6rem] sm:rounded-4xl
                         lg:w-[18rem] lg:h-[24rem] lg:rounded-4xl
                         xl:scale-140 xl:rounded-4xl' />
       </div>
-    </div>
+    </motion.section>
   )
 }
 
