@@ -92,12 +92,3 @@ const Projects = ({ section }) => {
 }
 
 export default Projects
-
-
-{/*
-    <ProjectCard projectName="Ecommerce web app"
-                 projectImage="./projects/ecomm.png"
-                 projectDescription="An e-commerce application designed as a product catalog. The system provides an admin panel for product and content management and a client interface for viewing and reserving products."
-                 projectTechnologies={["react", "node", "mongo"]}/>
-    
-*/}
