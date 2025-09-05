@@ -18,15 +18,15 @@ const About = ({section}) => {
         delay: 0.2,
       }}
       viewport={{ once: true, amount: 0.3 }}
-      id={section} className="container  min-h-screen grid grid-cols-1 justify-start items-start mx-auto gap-[2.5rem] px-4
+      id={section} className="container min-h-[calc(100vh-4rem)] grid grid-cols-1 justify-start items-start mx-auto gap-[2.5rem] px-4
                     sm:grid-cols-4
                     md:grid-cols-8 md:max-w-[890] md:gap-[2rem] md:justify-center md:items-center
                     lg:grid-cols-12 lg:max-w-[1190px]
                     xl:grid-cols-12 xl:max-w-[1280px]">
         <motion.div 
-          initial={{ x: -500, opacity: 0 }}
+          initial={{ x: "-50px", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -500, opacity: 0 }}
+          exit={{ x: "-50px", opacity: 0 }}
           transition={{
             delay: 0.2,
             duration: 1,
@@ -34,11 +34,11 @@ const About = ({section}) => {
             stiffness: 100 
           }}
           viewport={{once: true, amount: 0.1 }}
-          className="relative flex w-[19.75rem] h-[21.63256rem] justify-center items-center mx-auto
+          className="relative flex w-[19.75rem] h-[21.63256rem] justify-center items-center mx-auto z-[-10] 
                       sm:col-span-4
                       md:col-span-3 md:justify-start
                       lg:col-span-6 lg:w-[31.6rem] lg:h-[34.8rem]">
-          <Elipse className='fill-sand absolute bottom-0 left-0 w-full' />
+          <Elipse className='fill-sand absolute bottom-0 left-0 w-ful' />
           <Elipse className='fill-accent absolute top-0 left-0 w-full'/>
           <Image
           className='absolute top-0 left-0'
@@ -46,7 +46,7 @@ const About = ({section}) => {
           height={618}
           alt=""
           src="/shapes/dotsOverlay.svg" />
-          <Elipse className='fill-accent absolute top-0 opacity-85' />
+          <Elipse className='fill-accent absolute top-0 opacity-85'/>
           
           {/* AVATAR */}
           <img
@@ -80,7 +80,7 @@ const About = ({section}) => {
             </motion.a>
           </div>
         </motion.div>
-      <div className="w-full flex flex-col
+      <div className="w-full flex flex-col z-[-10]
                       sm:col-span-4 sm:items-start sm:justify-start
                       md:col-span-5 md:pl-[2rem]
                       lg:col-span-6 lg:pl-0">

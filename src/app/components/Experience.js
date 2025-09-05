@@ -124,9 +124,9 @@ const Experience = ({ section }) => {
                       md:col-span-3 md:justify-end
                       lg:col-span-5 lg:justify-center">
         <motion.img 
-          initial={{ x: 500, opacity: 0 }}
+          initial={{ x: "50px", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        exit={{ x: -500, opacity: 0 }}
+        exit={{ x: "50px", opacity: 0 }}
         transition={{
           delay: 0.2,
           duration: 1,

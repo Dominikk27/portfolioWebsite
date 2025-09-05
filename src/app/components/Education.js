@@ -12,7 +12,7 @@ const Education = ({ section }) => {
       transition={{
         delay: 0.2,
       }}
-      id={section} className="container min-h-screen grid grid-cols-1 justify-center items-center mx-auto gap-[1.38rem] px-4
+      id={section} className="container min-h-[calc(100vh-4rem)] grid grid-cols-1 justify-center items-center mx-auto gap-[1.38rem] px-4
                     sm:grid-cols-4
                     md:grid-cols-8 md:max-w-[890] md:gap-[2rem] md:justify-center md:items-center
                     lg:grid-cols-12 lg:max-w-[1190px]
@@ -78,9 +78,9 @@ const Education = ({ section }) => {
           </motion.div>
       </motion.div>
       <motion.img 
-        initial={{ x: -500, opacity: 0, scaleX: -1}}
+        initial={{ x: "-50px", opacity: 0, scaleX: -1}}
         animate={{ x: 0, opacity: 1, scaleX: -1 }}
-        exit={{ x: -500, opacity: 0, scaleX: -1 }}
+        exit={{ x: "-50px", opacity: 0, scaleX: -1 }}
         transition={{
           delay: 0.2,
           duration: 1,

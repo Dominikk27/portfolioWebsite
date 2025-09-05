@@ -54,15 +54,11 @@
 
 }
 
-.icon{
-  width: 2rem;
-  height: 2rem;
-}
-
 @layer base{
 
   html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body{
@@ -76,6 +72,11 @@
     padding:  5rem 0;
   }
 
+  .icon{
+    width: 2rem;
+    height: 2rem;
+    color: white;
+  }
   .font-display-h1 {
     font-family: var(--font-display-h1);
     font-size: var(--text-display-h1);

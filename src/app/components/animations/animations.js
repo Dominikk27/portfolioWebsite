@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 
 export const rtlFadeIn ={
-    hidden: { opacity: 0, x: 800 },
+    hidden: { opacity: 0, x: "50px" },
     visible: { opacity: 1, x: 0,
         transition:{
             delay: 0.5,
@@ -14,7 +14,7 @@ export const rtlFadeIn ={
 }
 
 export const ltrFadeIn ={
-    hidden: { opacity: 0, x: -300 },
+    hidden: { opacity: 0, x: "50px" },
     visible: { opacity: 1, x: 0,
         transition:{
             delay: 0.5,
@@ -26,7 +26,7 @@ export const ltrFadeIn ={
 }
 
 export const bttFadeIn = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: "50px" },
     visible: { opacity: 1, y: 0,
         transition:{
             delay: 0,
@@ -39,7 +39,7 @@ export const bttFadeIn = {
 
 
 export const ttbFadeIn = {
-    hidden: { opacity: 0, y: -300 },
+    hidden: { opacity: 0, y: "-50px" },
     visible: { opacity: 1, y: 0,
         transition:{
             delay: 0.2,
@@ -62,7 +62,7 @@ export const skillsTable = {
 }
 
 export const cardsVariant = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, x: 0 },
     visible: { opacity: 1, x: 0,
         transition:{
             type: "spring",
@@ -73,7 +73,7 @@ export const cardsVariant = {
 }
 
 export const educationTable = {
-   hidden: { opacity: 0, x: -300 },
+   hidden: { opacity: 0 },
     visible: { opacity: 1, x: 0,
         transition:{
             type: "spring",
@@ -84,7 +84,7 @@ export const educationTable = {
 }
 
 export const projectsTable = {
-   hidden: { opacity: 0, x: -300 },
+   hidden: { opacity: 0 },
     visible: { opacity: 1, x: 0,
         transition:{
             type: "spring",

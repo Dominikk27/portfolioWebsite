@@ -57,9 +57,9 @@ const Skills = ({ section }) => {
                     lg:grid-cols-12 lg:max-w-[1190px]
                     xl:grid-cols-12 xl:max-w-[1280px]">
       <motion.div 
-        initial={{ x: 300, opacity: 0 }}
+        initial={{ x: "50px", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        exit={{ x: 300, opacity: 0 }}
+        exit={{ x: "50px", opacity: 0 }}
         transition={{
           delay: 0.2,
           duration: 1,
@@ -145,7 +145,7 @@ const Skills = ({ section }) => {
           viewport={{ once: false, amount: 0.1 }}
           className="w-full text-left text-white text-md-para font-para-med">These are the tools and technologies I use most. I enjoy learning new ones and improving how I work on every project.</motion.p>
         <motion.div 
-          variants={skillsTable}
+          variants={ltrFadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.1}}
