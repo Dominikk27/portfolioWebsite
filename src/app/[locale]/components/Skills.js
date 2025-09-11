@@ -1,10 +1,11 @@
 'use client';
-import { HtmlIcon, CssIcon, ReactIcon, NodeIcon, CppIcon, PythonIcon, FlutterIcon, MongoIcon, MysqlIcon, UnityIcon, VisualIcon, CsharpIcon } from "@/app/components/svg/icons";
-import SkillBar from "@/app/components/ui/skillBar";
+import { HtmlIcon, CssIcon, ReactIcon, NodeIcon, CppIcon, PythonIcon, FlutterIcon, MongoIcon, MysqlIcon, UnityIcon, VisualIcon, CsharpIcon } from "@/app/[locale]/components/svg/icons";
+import SkillBar from "@/app/[locale]/components/ui/skillBar";
 
-import { rtlFadeIn, bttFadeIn, ttbFadeIn, ltrFadeIn, skillsTable } from "@/app/components/animations/animations";
+import { rtlFadeIn, bttFadeIn, ttbFadeIn, ltrFadeIn, skillsTable } from "@/app/[locale]/components/animations/animations";
 
 import { AnimatePresence, motion } from 'motion/react';
+import { useTranslations } from "use-intl";
 
 
 export const SkillsProps =[
@@ -44,6 +45,8 @@ export const IconsInsideElipse = [
   ]
 
 const Skills = ({ section }) => {
+  const t = useTranslations('Tools');
+
   return (
     <motion.section
       initial={{opacity: 0}}
@@ -137,13 +140,13 @@ const Skills = ({ section }) => {
           className='font-display-h1 text-white
                        text-[3rem]
                        md:text-md-h1
-                       xl:text-xl-h1'>My <span className='text-accent'>Toolkit</span></motion.h1>
+                       xl:text-xl-h1'>{t('title.first')} <span className='text-accent'>{t('title.second')}</span></motion.h1>
         <motion.p 
           variants={ltrFadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.1 }}
-          className="w-full text-left text-white text-md-para font-para-med">These are the tools and technologies I use most. I enjoy learning new ones and improving how I work on every project.</motion.p>
+          className="w-full text-left text-white text-md-para font-para-med">{t('description')}</motion.p>
         <motion.div 
           variants={ltrFadeIn}
           initial="hidden"

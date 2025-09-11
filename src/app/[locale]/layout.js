@@ -1,5 +1,6 @@
 import { Epilogue, Lato  } from "next/font/google";
 import "./globals.css";
+import { NextIntlClientProvider } from "next-intl";
 
 const epilogue = Epilogue({
   variable: "--font-epilogue",
@@ -19,12 +20,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
-    <html lang="en">
-      <body
-        className={`${epilogue.variable} ${lato.variable} antialiased`}
-      >
-        {children}
+    <html>
+      <body className={`${epilogue.variable} ${lato.variable} antialiased`}>
+        <NextIntlClientProvider>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

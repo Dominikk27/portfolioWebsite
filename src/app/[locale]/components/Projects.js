@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectCard from '@/app/components/ui/projectCard'
+import ProjectCard from '@/app/[locale]/components/ui/projectCard'
 
 import { motion, hover } from 'motion/react';
 import { cardsVariant, educationTable, rtlFadeIn, projectsTable } from './animations/animations';

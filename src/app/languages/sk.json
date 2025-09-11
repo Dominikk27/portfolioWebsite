@@ -1,0 +1,43 @@
+{
+    "About": {
+        "greetings": "Ahoj,",
+        "me": "Volám sa",
+        "contactButton": "Napíšte mi",
+        "readMore": "Zistite viac",
+        "description": "Rád sa venujem tvorbe webových, desktopových a mobilných aplikácií a pri tom ma baví skúmať nové technológie a hľadať spôsoby, ako ich využiť v praxi. Neustále sa snažím vzdeľavať prostredníctvom kurzov, tutoriálov alebo diskusie na fórach. Okrem programovania sa rád venujem zvieratám a pozeraniu filmov."
+    },
+
+    "Tools": {
+        "title":{
+            "first": "Používané",
+            "second": "Nástroje"
+        },
+        "description": "Rád pracujem s frameworkami ako React či PyQt, s databázami ako MongoDB a s backendom v Node.js. Pri každom projekte sa snažím zlepšovať spôsob, akým pracujem, a zároveň sa učím nové postupy a technológie, ktoré mi pomáhajú tvoriť lepšie riešenia."
+    },
+
+    "Education": {
+        "title":{
+            "first": "Moje",
+            "second": "Vzdelanie"
+        },
+        "description": "Už počas strednej školy som sa začal venovať programovaniu a neskôr som pokračoval v odbore aplikovaná informatika na vysokej škole. Neustále sa vzdelávam cez kurzy, tutoriály a fóra a snažím sa každú novú prácu zlepšovať získanými poznatkami"
+    },
+
+    "Experience": {
+        "description": ""
+    },
+
+    "Projects": {
+        "description": ""
+    },
+
+    "Navigation":{
+        "about": "O mne",
+        "tools": "Nástroje",
+        "education": "Vzdelanie",
+        "experience": "Skúsenosti",
+        "projects": "Projekty",
+        "resume": "Životopis"
+
+    }
+}

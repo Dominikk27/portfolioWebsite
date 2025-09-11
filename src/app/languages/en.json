@@ -1,0 +1,43 @@
+{
+    "About": {
+        "greetings": "Hello",
+        "me": "I am",
+        "contactButton": "Contact Me",
+        "readMore": "Read More",
+        "description": "I enjoy programming and building web applications with React, Node.js and MongoDB. I like learning new things, exploring different technologies and improving with every project."
+    },
+
+    "Tools": {
+        "title":{
+            "first": "My",
+            "second": "Toolkit"
+        },
+        "description": "These are the tools and technologies I use most. I enjoy learning new ones and improving how I work on every project."
+    },
+
+    "Education": {
+        "title":{
+            "first": "My",
+            "second": "Education"
+        },
+        "description": "I have gained valuable experience in IT, where I apply my knowledge in practice, improve my technical skills, and contribute to solving real-world problems."
+    },
+
+    "Experience": {
+        "description": ""
+    },
+
+    "Projects": {
+        "description": ""
+    },
+
+    "Navigation":{
+        "about": "About",
+        "tools": "Tools",
+        "education": "Education",
+        "experience": "Experience",
+        "projects": "Projects",
+        "resume": "Resume"
+
+    }
+}

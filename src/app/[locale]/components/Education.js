@@ -3,8 +3,11 @@ import EducationCard from './ui/educationCard'
 
 import { motion, hover } from 'motion/react';
 import { cardsVariant, educationTable, rtlFadeIn } from './animations/animations';
+import { useTranslations } from 'next-intl';
 
 const Education = ({ section }) => {
+  const t = useTranslations('Education');
+
   return (
     <motion.section 
       initial={{opacity: 0}}
@@ -30,7 +33,7 @@ const Education = ({ section }) => {
               className='font-display-h1 text-white
                            text-phone-h1
                            md:text-md-h1
-                           xl:text-xl-h1'>My <span className='text-accent'>Education</span></motion.h1>
+                           xl:text-xl-h1'>{t('title.first')} <span className='text-accent'>{t('title.second')}</span></motion.h1>
             <motion.p 
               variants={rtlFadeIn}
               initial="hidden"
@@ -38,7 +41,7 @@ const Education = ({ section }) => {
               viewport={{ once: false, amount: 0.1}}
               className='text-white text-center text-para-med font-para-med
                             md:text-justify md:text-md-para
-                            xl:text-xl-para'>I have gained valuable experience in IT, where I apply my knowledge in practice, improve my technical skills, and contribute to solving real-world problems.</motion.p>
+                            xl:text-xl-para'>{t('description')}</motion.p>
         </div>
         <motion.div 
           variants={educationTable}

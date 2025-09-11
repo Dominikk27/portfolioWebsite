@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 import {HtmlIcon, CssIcon, ReactIcon, NodeIcon, 
         CppIcon, PythonIcon, FlutterIcon, MongoIcon, 
-        MysqlIcon, UnityIcon, VisualIcon } from "@/app/components/svg/icons";
+        MysqlIcon, UnityIcon, VisualIcon } from "@/app/[locale]/components/svg/icons";
 
 
 const SkillBar = ({ Icon, percentage, index}) => {

@@ -1,14 +1,17 @@
 import React from 'react'
 import Image from 'next/image';
-import elipse from '../../../public/shapes/elipse.svg';
-import Elipse from '@/app/components/svg/elipse';
+import Elipse from '@/app/[locale]/components/svg/elipse';
 import { GithubIcon, LinkedinIcon } from './svg/icons';
+
+import { useTranslations } from 'next-intl';
 
 
 import { motion, hover } from 'motion/react';
-import { rtlFadeIn, bttFadeIn, ttbFadeIn } from '@/app/components/animations/animations';
+import { rtlFadeIn, bttFadeIn, ttbFadeIn } from '@/app/[locale]/components/animations/animations';
 
 const About = ({section}) => {
+
+  const t = useTranslations('About');
 
   return (
     <motion.section 
@@ -89,22 +92,21 @@ const About = ({section}) => {
             initial="hidden"
             whileInView="visible"
             className='font-text-h4 text-phone-h4 leading-phone-h4 text-white
-                         xl:text-xl-h4'>Hello,</motion.h4>
+                         xl:text-xl-h4'>{t('greetings')}</motion.h4>
           <motion.h1 
             variants={rtlFadeIn}
             initial="hidden"
             whileInView="visible"
             className='font-display-h1 text-white
                          text-phone-h1
-                         md:text-md-h1
-                         xl:text-xl-h1'>I am <span className='text-accent'>Dominik Bučák</span></motion.h1>
+                         md:text-md-h1'>{t('me')} <span className='text-accent'>Dominik Bučák</span></motion.h1>
           <motion.p
             variants={rtlFadeIn}
             initial="hidden"
             whileInView="visible"
             className='text-white text-center text-para-med font-para-med
                           md:text-justify md:text-md-para
-                          xl:text-xl-para'>I enjoy programming and building web applications with React, Node.js and MongoDB. I like learning new things, exploring different technologies and improving with every project.</motion.p>
+                          xl:text-xl-para'>{t('description')}</motion.p>
           <div className="w-full flex flex-row-reverse gap-[2rem] justify-center items-center mt-[1.625rem] px-[1rem]
                           md:justify-end md:px-0 md:flex-row">
             <motion.a 
@@ -112,14 +114,14 @@ const About = ({section}) => {
               initial="hidden"
               whileInView="visible"
               className='w-full h-[2.4375rem] rounded-[0.375rem] bg-cream btn-text flex items-center justify-center
-                               md:w-[10.6875rem] md:h-[2.4375rem]'>Read More</motion.a>
+                               md:w-[10.6875rem] md:h-[2.4375rem]'>{t('readMore')}</motion.a>
             <motion.a 
               variants={bttFadeIn}
               initial="hidden"
               whileInView="visible"
               href='mailto:dominikbucak@gmail.com'
               className='w-full h-[2.4375rem] rounded-[0.375rem] bg-accent btn-text flex items-center justify-center 
-                               md:w-[10.6875rem] md:h-[2.4375rem]'>Contact Me</motion.a>
+                               md:w-[10.6875rem] md:h-[2.4375rem]'>{t('contactButton')}</motion.a>
           </div>
       </div>
     </motion.section>
