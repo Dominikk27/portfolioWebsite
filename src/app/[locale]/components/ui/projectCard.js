@@ -23,15 +23,15 @@ const ProjectCard = ({ projectImage, projectName, projectDescription, projectTec
     const firstWord = words.shift();
     const rest = words.join(" ");
   return (
-    <div className=" flex flex-col roudned-full bg-cream w-full max-w-[21rem] rounded-[1.5625rem] pb-[1.3125rem]">
+    <div className=" flex flex-col roudned-full bg-cream w-full max-w-[21rem] rounded-[1.5625rem] pb-[1.3125rem] h-full">
         <img src={projectImage} alt={`image of ${projectName} project`} className='w-full mb-[1.4rem] rounded-t-[1.3125rem] h-[200px] object-cover' />
         <h1 className='font-project-title text-project-title font-[400]'>
             <span className='text-accent font-[700]'>{firstWord}</span> {rest}
         </h1>
-        <div className="w-full px-[1rem] flex justify-center items-center text-left">
-            <p className='font-project-description text-project-description'>{projectDescription}</p>
+        <div className="w-full px-[1rem] flex justify-center items-center text-left flex-grow">
+            <p className='font-project-description text-project-description h-[12rem] overflow-y-auto'>{projectDescription}</p>
         </div>
-        <div className="w-full pt-[1.5rem]">
+        <div className="w-full pt-[1.5rem] flex-grow">
             <h4 className='text-accent font-[700]'>Tools & Technologies</h4>
             <div className="flex justify-center py-2 gap-2">
                 {projectTechnologies && projectTechnologies.map((tech, index) =>{

@@ -4,7 +4,7 @@
         "me": "I am",
         "contactButton": "Contact Me",
         "readMore": "Read More",
-        "description": "I enjoy programming and building web applications with React, Node.js and MongoDB. I like learning new things, exploring different technologies and improving with every project."
+        "description": "I enjoy creating web, desktop, and mobile applications, and I’m passionate about exploring new technologies and finding practical ways to apply them. I continuously strive to improve my skills through courses, tutorials, and discussions on forums. Outside of programming, I enjoy spending time with animals and watching movies."
     },
 
     "Tools": {
@@ -12,7 +12,7 @@
             "first": "My",
             "second": "Toolkit"
         },
-        "description": "These are the tools and technologies I use most. I enjoy learning new ones and improving how I work on every project."
+        "description": "I enjoy working with frameworks such as React and PyQt, databases like MongoDB, and backend development with Node.js. With every project, I strive to improve my workflow while learning new techniques and technologies that help me create better solutions."
     },
 
     "Education": {
@@ -20,15 +20,108 @@
             "first": "My",
             "second": "Education"
         },
-        "description": "I have gained valuable experience in IT, where I apply my knowledge in practice, improve my technical skills, and contribute to solving real-world problems."
+        "description": "I started programming back in high school and later continued my studies in Applied Computer Science at university. I continually educate myself through courses, tutorials, and forums, and I strive to improve every new project with the knowledge I gain.",
+        "school_1":{
+            "title": "SPŠ Myjava",
+            "major": "Electrical Engineering",
+            "qualification": "Graduation, §21 Electrician",
+            "years": "2017-2021"
+        },
+        "school_2":{
+            "title": "UCM Trnava",
+            "major": "Applied Computer Science",
+            "qualification": "Bachelor's Degree (Bc.)",
+            "years": "2021-2024"
+        },
+        "school_3":{
+            "title": "UCM Trnava",
+            "major": "Applied Computer Science",
+            "qualification": "Master's Degree (Mgr.)",
+            "years": "2024-2026"
+        }
     },
 
     "Experience": {
-        "description": ""
+        "title":{
+            "first": "My",
+            "second": "Experience"
+        },
+        "description": "I have gained valuable experience in IT, where I apply my knowledge in practice, improve my technical skills, and contribute to solving real-world problems.",
+        "Card":{
+            "title": "IT Technician",
+            "Company": "HS Consult s.r.o.",
+            "years": "2024 - Present",
+            "experiencePoint1":{
+                "title": "Management and Maintenance",
+                "point1": "Installed and configured new devices.",
+                "point2": "Ensured regular software updates and system stability.",
+                "point3": "Centralized router management via Vigor ACS and setup of VPN connections."
+            },
+            "experiencePoint2":{
+                "title": "Configuration and Administration",
+                "point1": "Synology NAS configuration and management.",
+                "point2": "Configuration and management of Vigor routers and APs.",
+                "point3": "Centralized router management using Vigor ACS."
+            },
+            "experiencePoint3":{
+                "title": "Network Administration",
+                "point1": "Implemented VPN connections for secure remote access.",
+                "point2": "Setup and troubleshooting of VPN connections.",
+                "point3": "Configured firewall rules to protect internal network."
+            },
+            "experiencePoint4":{
+                "title": "Technical troubleshooting",
+                "point1": "Diagnosing and resolving hardware and software issues.",
+                "point2": "Providing technical assistance to end-users.",
+                "point3": "Provided real-time support to ensure minimal downtime for end-users."
+            }
+        }
     },
 
     "Projects": {
-        "description": ""
+        "title":{
+            "first": "My",
+            "second": "Projects"
+        },
+        "description": "These projects represent a selection of my ongoing and completed works focused on the development of web and desktop applications, game creation, and smart systems.",
+        "Cards":{
+            "Card1":{
+                "title": "E-commerce Web App",
+                "description": "An e-commerce type web application serving as a modern product catalog with an integrated admin panel. It allows adding, editing, and deleting products, including image and detail management. Developed using React, Node.js/Express, and MongoDB.",
+                "showcase": "https://github.com/Dominikk27/ReactJS-MongoDB-Eshop",
+                "repo": "https://github.com/Dominikk27/ReactJS-MongoDB-Eshop"
+            },
+            "Card2":{
+                "title": "Road Pothole Detection",
+                "description": "An application for detecting road potholes in video, using OpenCV for image processing and YOLOv8 for pothole recognition. Detections are automatically saved along with the GPS location of the flight. The project is developed in Python with a PyQt graphical interface.",
+                "showcase": "https://www.youtube.com/watch?v=WuyokCWvYE8",
+                "repo": "https://github.com/Dominikk27/RoadDefectDetection"
+            },
+            "Card3":{
+                "title": "2D-Platform game",
+                "description": "A simple 2D platformer game where the player jumps between platforms, collects fuel, and avoids enemies to progress as far as possible. The game includes 6 increasingly challenging levels.",
+                "showcase": "https://drive.google.com/drive/folders/1dFATvGxqsMB9R_TEOmJUDGac9vO7EIfl",
+                "repo": "https://drive.google.com/drive/folders/1dFATvGxqsMB9R_TEOmJUDGac9vO7EIfl"
+            },
+            "Card4":{
+                "title": "Arkanoid game",
+                "description": "An Arkanoid-style game where the player controls a ball and paddle, tracks lives and score, and collects bonuses that can be positive or negative. The project includes a level system with progress saving and a simple mechanism for adding new levels and bonuses, making it easy to expand the game.",
+                "showcase": "https://dominikk27.itch.io/arkanoid-game",
+                "repo": "https://github.com/Dominikk27/ArkanoidGame"
+            },
+            "Card5":{
+                "title": "Crafting game",
+                "description": "A game prototype where the player completes various tasks based on NPC orders, such as creating glasses or clothing. It is a simple and intentionally minimalistic concept that allows easy addition of new tasks and rewards for correctly created products.",
+                "showcase": "https://dominikk27.itch.io/ecovan-game-2",
+                "repo": "https://github.com/Dominikk27/UnityGame2D-EcoVan"
+            },
+            "Card6":{
+                "title": "Smarthome system prototype",
+                "description": "A project focused on prototyping the functionality of a smart home. The hardware part was implemented using Arduino and ESP8266 modules, which retrieved data from a Firebase database. An Android application, created in Android Studio (Java), communicated with the database in real time and allowed control of individual home components (e.g., lights, garage door, or underfloor heating). Components can also be controlled manually through a built-in control panel.",
+                "showcase": "https://drive.google.com/drive/folders/1d5Y4sg-APcZzly5u2B4kWqXYUON7WHWG?usp=sharing",
+                "repo": "https://drive.google.com/drive/folders/1d5Y4sg-APcZzly5u2B4kWqXYUON7WHWG?usp=sharing"
+            }
+        }
     },
 
     "Navigation":{

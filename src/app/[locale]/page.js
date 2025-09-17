@@ -1,5 +1,5 @@
 'use client';
-import {useTranslations} from 'next-intl';
+import {useLocale, useTranslations} from 'next-intl';
 import Image from "next/image";
 
 // SVG
@@ -14,10 +14,13 @@ import Navigation from "@/app/[locale]/components/Navigation";
 
 export default function Home() {
 
+  const locale = useLocale();
+  console.log("locale: ", locale);
+
   return (
     <>
       <Navigation />
-      <About section={"about"}/>
+      <About section={"about"} key={locale}/>
       <Skills section={"skills"}/>
       <Education section={"education"}/>
       <Experience section={"experience"}/>

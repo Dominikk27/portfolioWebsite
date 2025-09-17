@@ -16,11 +16,6 @@ const Navigation = () => {
 
   const t = useTranslations('Navigation');
 
-  const changeLanguage = (lang) =>{
-    router.replace(`/${lang}${cleanPath}`);
-
-  }
-
   useEffect(() =>{
     const handleScroll = () =>{
       if(window.scrollY > 50){
@@ -34,6 +29,12 @@ const Navigation = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() =>{
+    setIsOpen(false);
+  }, []);
+
+  
 
   const navLinks = [
     { href: "#about", labelKey: "about"},

@@ -54,28 +54,28 @@ const Education = ({ section }) => {
                        lg:col-span-7">
          <motion.div variants={cardsVariant}>
             <EducationCard 
-              title={"SPŠ Myjava"}
-              major={"Elektrotechnika"}
-              qualification="§21"
-              years="2017-2021"
+              title={t('school_1.title')}
+              major={t('school_1.major')}
+              qualification={t('school_1.qualification')}
+              years={t('school_1.years')}
               complete={true}
             />
          </motion.div>
           <motion.div variants={cardsVariant}>
             <EducationCard 
-              title={"UCM in Trnava"}
-              major={"Applied Computer Science"}
-              qualification="Bc."
-              years="2021-2024"
+              title={t('school_2.title')}
+              major={t('school_2.major')}
+              qualification={t('school_2.qualification')}
+              years={t('school_2.years')}
               complete={true}
             />
         </motion.div>
           <motion.div variants={cardsVariant} className="md:col-span-2 flex justify-center">
             <EducationCard 
-              title={"UCM in Trnava"}
-              major={"Applied Computer Science"}
-              qualification="Mgr."
-              years="2024-2026"
+              title={t('school_3.title')}
+              major={t('school_3.major')}
+              qualification={t('school_3.qualification')}
+              years={t('school_3.years')}
               complete={false}
             />
           </motion.div>

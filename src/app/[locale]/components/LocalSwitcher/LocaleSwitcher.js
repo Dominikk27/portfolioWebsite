@@ -6,8 +6,8 @@ const LocaleSwitcher = () => {
   const locale = useLocale();
   return (
     <LocaleSwitcherSelect locale={locale}>
-      <option value="sk">SK</option>
-      <option value="en">EN</option>
+      <option value="sk" className='text-black'>SK</option>
+      <option value="en" className='text-black'>EN</option>
     </LocaleSwitcherSelect>
   )
 }

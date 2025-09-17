@@ -7,48 +7,51 @@ import { FaDesktop } from "react-icons/fa";
 import { FiGlobe } from "react-icons/fi";
 import { IoWarningOutline } from "react-icons/io5";
 import { bttFadeIn, ltrFadeIn } from './animations/animations';
-
-
-const ExperienceSections = [
-  {
-    icon: TbSettings,
-    title: "Management and Maintenance ",
-    points: [
-      "Installed and configured new devices.",
-      "Ensured regular software updates and system stability.",
-      "Centralized router management via Vigor ACS and setup of VPN connections."
-    ]
-  },
-  {
-    icon: FaDesktop,
-    title: "Configuration and Administration",
-    points: [
-      "Synology NAS setup and management.",
-      "Configuration of Vigor routers and APs.",
-      "Centralized router management using Vigor ACS."
-    ]
-  },
-  {
-    icon: FiGlobe,
-    title: "Network Administration",
-    points: [
-      "Implemented VPN connections for secure remote access.",
-      "Setup and troubleshooting of VPN connections.",
-      "Configured firewall rules to protect internal network."
-    ]
-  },
-  {
-    icon: IoWarningOutline,
-    title: "Troubleshooting technical issues",
-    points: [
-      "Diagnosing and resolving hardware and software issues.",
-      "Providing technical assistance to end-users.",
-      "Provided real-time support to ensure minimal downtime for end-users."
-    ]
-  }
-];
+import { useTranslations } from 'next-intl';
 
 const Experience = ({ section }) => {
+
+  const t = useTranslations('Experience');
+
+  const ExperienceSections = [
+    {
+      icon: TbSettings,
+      title: t('Card.experiencePoint1.title'),
+      points: [
+        t('Card.experiencePoint1.point1'),
+        t('Card.experiencePoint1.point2'),
+        t('Card.experiencePoint1.point3'),
+      ]
+    },
+    {
+      icon: FaDesktop,
+      title: t('Card.experiencePoint2.title'),
+      points: [
+        t('Card.experiencePoint2.point1'),
+        t('Card.experiencePoint2.point2'),
+        t('Card.experiencePoint2.point3'),
+      ]
+    },
+    {
+      icon: FiGlobe,
+      title: t('Card.experiencePoint3.title'),
+      points: [
+        t('Card.experiencePoint3.point1'),
+        t('Card.experiencePoint3.point2'),
+        t('Card.experiencePoint3.point3'),
+      ]
+    },
+    {
+      icon: IoWarningOutline,
+      title: t('Card.experiencePoint4.title'),
+      points: [
+        t('Card.experiencePoint4.point1'),
+        t('Card.experiencePoint4.point2'),
+        t('Card.experiencePoint4.point3'),
+      ]
+    }
+  ];
+
   return (
     <motion.section 
       initial={{opacity: 0}}
@@ -73,7 +76,7 @@ const Experience = ({ section }) => {
           className='font-display-h1 text-white
                        text-phone-h1
                        md:text-md-h1
-                       xl:text-xl-h1'>My <span className='text-accent'>Experience</span></motion.h1>
+                       xl:text-xl-h1'>{t('title.first')} <span className='text-accent'>{t('title.second')}</span></motion.h1>
         <motion.p 
           variants={ltrFadeIn}
           initial="hidden"
@@ -81,7 +84,7 @@ const Experience = ({ section }) => {
           viewport={{ once: false, amount: 0.1}}
           className='text-white text-center text-para-med font-para-med
                           md:text-justify md:text-md-para
-                          xl:text-xl-para'>I have gained valuable experience in IT, where I apply my knowledge in practice, improve my technical skills, and contribute to solving real-world problems.</motion.p>
+                          xl:text-xl-para'>{t('description')}</motion.p>
       </div>
       <motion.div 
         variants={bttFadeIn}
@@ -94,10 +97,10 @@ const Experience = ({ section }) => {
                       lg:col-span-7 lg:justify-start">
         <div className="w-[570px] flex flex-col rounded-[2rem] bg-sand py-[1.45rem] px-2
                         lg:w-[660px]">
-          <h2 className='text-phone-h2 text-accent font-[700]'>IT Technician</h2>
+          <h2 className='text-phone-h2 text-accent font-[700]'>{t('Card.title')}</h2>
           <div className="flex flex-row justify-between items-center mb-2">
-            <h3 className='text-phone-h3 font-[600]'>HSConsult s.r.o.</h3>
-            <h3 className='text-phone-h3 text-accent '>2024 - Present</h3>
+            <h3 className='text-phone-h3 font-[600]'>{t('Card.Company')}</h3>
+            <h3 className='text-phone-h3 text-accent '>{t('Card.years')}</h3>
           </div>
           <div className=" grid grid-cols-1 gap-2">
             {ExperienceSections.map((section, idx) => (

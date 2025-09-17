@@ -50,7 +50,7 @@ const Skills = ({ section }) => {
   return (
     <motion.section
       initial={{opacity: 0}}
-      whileInView={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
       transition={{
         delay: 0.2,
       }}
@@ -156,7 +156,12 @@ const Skills = ({ section }) => {
                         md:grid-rows-6 md:justify-center
                         lg:grid-rows-4 lg:justify-start">
           {SkillsProps.map((skill, index) =>
-            <motion.div key={index} variants={bttFadeIn} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.1 }}>
+            <motion.div key={index} 
+                        variants={bttFadeIn} 
+                        initial="hidden" 
+                        whileInView="visible" 
+                        viewport={{ once: false, 
+                                    amount: 0.1 }}>
               <SkillBar Icon={skill.Icon} percentage={skill.percentage} index={index} />
             </motion.div>
           )}

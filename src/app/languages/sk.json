@@ -20,15 +20,108 @@
             "first": "Moje",
             "second": "Vzdelanie"
         },
-        "description": "Už počas strednej školy som sa začal venovať programovaniu a neskôr som pokračoval v odbore aplikovaná informatika na vysokej škole. Neustále sa vzdelávam cez kurzy, tutoriály a fóra a snažím sa každú novú prácu zlepšovať získanými poznatkami"
+        "description": "Už počas strednej školy som sa začal venovať programovaniu a neskôr som pokračoval v odbore aplikovaná informatika na vysokej škole. Neustále sa vzdelávam cez kurzy, tutoriály a fóra a snažím sa každú novú prácu zlepšovať získanými poznatkami",
+        "school_1":{
+            "title": "SPŠ Myjava",
+            "major": "Elektrotechnika",
+            "qualification": "Maturita, §21 Elektrotechnik",
+            "years": "2017-2021"
+        },
+        "school_2":{
+            "title": "UCM Trnava",
+            "major": "Aplikovaná Informatika",
+            "qualification": "Bakalárske štúdium (Bc.)",
+            "years": "2021-2024"
+        },
+        "school_3":{
+            "title": "UCM Trnava",
+            "major": "Aplikovaná Informatika",
+            "qualification": "Magisterské štúdium (Mgr.)",
+            "years": "2024-2026"
+        }
     },
 
     "Experience": {
-        "description": ""
+        "title":{
+            "first": "Moje",
+            "second": "Skúsenosti"
+        },
+        "description": "Počas práce v IT som získal skúsenosti so správou zariadení, konfiguráciou sietí a riešením technických problémov.",
+        "Card":{
+            "title": "IT Technik",
+            "Company": "HS Consult s.r.o.",
+            "years": "2024 - Súčasnosť",
+            "experiencePoint1":{
+                "title": "Správa a údržba",
+                "point1": "Inštalácia a konfigurácia nových zariadení",
+                "point2": "Zabezpečovanie správneho a stabilného behu zariadení a aplikácií",
+                "point3": "Centralizovaná správa zariadení"
+            },
+            "experiencePoint2":{
+                "title": "Konfigurácia a Administrácia",
+                "point1": "Konfigurácia a manažment Synology NAS",
+                "point2": "Konfigurácia Vigor routerov a AP",
+                "point3": "Centralizovaná správa zariadení"
+            },
+            "experiencePoint3":{
+                "title": "Sieťová Administrácia",
+                "point1": "Implementácia a nastavenie VPN pripojení.",
+                "point2": "Správa bezpečnostných prvkov siete Firewall, VPN, ...",
+                "point3": "Riešenie sieťovej štruktúry firiem."
+            },
+            "experiencePoint4":{
+                "title": "Riešenie technických problémov",
+                "point1": "Diagnostikovanie a riešenie problémov spojených s hardvérom a softvérom.",
+                "point2": "Poskytovanie technickej podpory pri riešeni problémov pre koncových používateľov.",
+                "point3": "Poskytovanie okamžitých riešení technických problémov."
+            }
+        }
     },
 
     "Projects": {
-        "description": ""
+        "title":{
+            "first": "Moje",
+            "second": "Projekty"
+        },
+        "description": "Tieto projekty predstavujú výber z mojich rozpracovaných aj dokončených prác, ktoré sú zamerane na tvorbu webových a desktopových aplikácií, tvorbu hier a inteligentné systémy.",
+        "Cards":{
+            "Card1":{
+                "title": "E-commerce webová aplikácia",
+                "description": "Webová aplikácia typu e-commerce, slúžiaca ako moderný katalóg produktov s integrovaným admin panelom. Umožňuje pridávanie, úpravu a mazanie produktov, vrátane správy obrázkov a detailov. Vyvinutá je pomocou React, Node.js/Express a MongoDB.",
+                "showcase": "https://github.com/Dominikk27/ReactJS-MongoDB-Eshop",
+                "repo": "https://github.com/Dominikk27/ReactJS-MongoDB-Eshop"
+            },
+            "Card2":{
+                "title": "Detekcia cestných výtlkov",
+                "description": "Aplikácia na detekciu cestných výtlkov vo videu, využívajúca OpenCV na spracovanie obrazu a YOLOv8 na rozpoznávanie výtlkov. Detekcie sú automaticky ukladané spolu s GPS lokalizáciou miesta letu. Projekt je vyvinutý v Pythone s grafickým rozhraním PyQt.",
+                "showcase": "https://www.youtube.com/watch?v=WuyokCWvYE8",
+                "repo": "https://github.com/Dominikk27/RoadDefectDetection"
+            },
+            "Card3":{
+                "title": "2D-Platformová hra",
+                "description": "Jednoduchá 2D platformová hra, v ktorej hráč skáče medzi plošinami, zbiera palivo a zároveň sa vyhýba nepriateľom, aby sa dostal čo najďalej. Hra obsahuje 6 postupne náročnejších levelov.",
+                "showcase": "https://drive.google.com/drive/folders/1dFATvGxqsMB9R_TEOmJUDGac9vO7EIfl",
+                "repo": "https://drive.google.com/drive/folders/1dFATvGxqsMB9R_TEOmJUDGac9vO7EIfl"
+            },
+            "Card4":{
+                "title": "Arkanoid hra",
+                "description": "Hra typu Arkanoid, kde hráč ovláda loptičku a plošinku, sleduje počet životov, skóre a zbiera bonusy, ktoré môžu byť pozitívne alebo negatívne. Projekt obsahuje level systém s ukladaním progresu a jednoduchý mechanizmus na pridávanie nových levelov a bonusov, čo umožňuje ľahké rozširovanie hry.",
+                "showcase": "https://dominikk27.itch.io/arkanoid-game",
+                "repo": "https://github.com/Dominikk27/ArkanoidGame"
+            },
+            "Card5":{
+                "title": "Hra s táskami",
+                "description": "Prototyp hry, v ktorej hráč plní rôzne tásky na základe objednávok NPC, napríklad tvorbu okuliarov či oblečenia. Ide o jednoduchý a zámerne osekaný koncept, v ktorom je možné ľahko pridávať nové tásky aj odmeny za správne vytvorené produkty.",
+                "showcase": "https://dominikk27.itch.io/ecovan-game-2",
+                "repo": "https://github.com/Dominikk27/UnityGame2D-EcoVan"
+            },
+            "Card6":{
+                "title": "Prototyp Smarthome systému",
+                "description": "Projekt zameraný na prototypovanie fungovania inteligentnej domácnosti. Hardvérová časť bola realizovaná pomocou Arduina a modulov ESP8266, ktoré získavali údaje z Firebase databázy. Android aplikácia, vytvorená v Android Studiu (Java), komunikovala s databázou v reálnom čase a umožňovala ovládať jednotlivé komponenty domácnosti (napr. svetlá, garážové dvere či podlahové kúrenie). Jednotlivé komponenty je možné ovládať aj manuálne cez vstavaný kontrolný panel.",
+                "showcase": "https://drive.google.com/drive/folders/1d5Y4sg-APcZzly5u2B4kWqXYUON7WHWG?usp=sharing",
+                "repo": "https://drive.google.com/drive/folders/1d5Y4sg-APcZzly5u2B4kWqXYUON7WHWG?usp=sharing"
+            }
+        }
     },
 
     "Navigation":{
