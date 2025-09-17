@@ -126,7 +126,6 @@ const Skills = ({ section }) => {
         </div>
       </motion.div>
       
-
       {/* CONTENT */}
       <div className="w-full flex flex-col
                       sm:col-span-4
