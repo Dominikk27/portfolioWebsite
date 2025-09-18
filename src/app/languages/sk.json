@@ -84,6 +84,8 @@
             "second": "Projekty"
         },
         "description": "Tieto projekty predstavujú výber z mojich rozpracovaných aj dokončených prác, ktoré sú zamerane na tvorbu webových a desktopových aplikácií, tvorbu hier a inteligentné systémy.",
+        "repoBTN": "Repozitár",
+        "projectBTN": "Zobraziť",
         "Cards":{
             "Card1":{
                 "title": "E-commerce webová aplikácia",

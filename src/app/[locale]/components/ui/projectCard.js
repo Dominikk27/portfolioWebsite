@@ -3,6 +3,7 @@ import {UnityIcon, ReactIcon, NodeIcon, MongoIcon, PythonIcon, MysqlIcon, Opencv
 
 import { AiOutlineEye } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 const IconMap = {
     unity: UnityIcon,
@@ -19,11 +20,13 @@ const IconMap = {
 
 const ProjectCard = ({ projectImage, projectName, projectDescription, projectTechnologies, repoLink, projectLink, }) => {
 
+    const t = useTranslations('Projects');
+
     const words = projectName.split(" ");
     const firstWord = words.shift();
     const rest = words.join(" ");
   return (
-    <div className=" flex flex-col roudned-full bg-cream w-full max-w-[21rem] rounded-[1.5625rem] pb-[1.3125rem] h-full">
+    <div className=" flex flex-col bg-cream w-full max-w-[21rem] rounded-[1.5625rem] pb-[1.3125rem] h-full">
         <img src={projectImage} alt={`image of ${projectName} project`} className='w-full mb-[1.4rem] rounded-t-[1.3125rem] h-[200px] object-cover' />
         <h1 className='font-project-title text-project-title font-[400]'>
             <span className='text-accent font-[700]'>{firstWord}</span> {rest}
@@ -41,8 +44,8 @@ const ProjectCard = ({ projectImage, projectName, projectDescription, projectTec
             </div>
         </div>
         <div className="w-full flex gap-[0.3125rem] justify-center px-[0.5rem] pt-[1.5rem]">
-            <a href={projectLink ? projectLink : "#"} className="w-full flex items-center gap-[0.3125rem] justify-center text-buttons h-[3.0625rem] rounded-[0.3125rem] bg-sand"> <AiOutlineEye /> View Project</a>
-            <a href={repoLink ? repoLink : "#"} className="w-full flex items-center gap-[0.3125rem] justify-center text-buttons h-[3.0625rem] rounded-[0.3125rem] bg-accent"> <FaGithub /> View Repo</a>
+            <a href={projectLink ? projectLink : "#"} className="w-full flex items-center gap-[0.3125rem] justify-center text-buttons h-[3.0625rem] rounded-[0.3125rem] bg-sand"> <AiOutlineEye /> {t('projectBTN')}</a>
+            <a href={repoLink ? repoLink : "#"} className="w-full flex items-center gap-[0.3125rem] justify-center text-buttons h-[3.0625rem] rounded-[0.3125rem] bg-accent"> <FaGithub /> {t('repoBTN')}</a>
         </div>
     </div>
   )

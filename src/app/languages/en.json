@@ -84,6 +84,8 @@
             "second": "Projects"
         },
         "description": "These projects represent a selection of my ongoing and completed works focused on the development of web and desktop applications, game creation, and smart systems.",
+        "repoBTN": "View Repo",
+        "projectBTN": "View Project",
         "Cards":{
             "Card1":{
                 "title": "E-commerce Web App",
