@@ -45,14 +45,14 @@ const Navigation = () => {
   ]
 
   return (
-    <div className={`fixed w-full px-[2rem] py-2 flex flex-row-reverse md:flex-row justify-between items-center transition-all duration-500 ease-in
-                    ${scrolled ? "md:bg-black/10 md:backdrop-blur-md z-100" : ""}`}>
+    <div className={`fixed w-full px-[2rem] py-2 flex flex-row-reverse md:flex-row justify-between items-center transition-all duration-500 ease-in z-[1000]
+                    ${scrolled ? "bg-black/10 backdrop-blur-md z-100" : ""}`}>
         <div className="logo w-auto h-full flex items-center justify-center pt-2">
           <motion.a 
             whileHover={{rotate: 360}}
             transition={{ duration: 0.6, ease: "easeInOut" }}
             href='#about'
-            className='text-display-h1 text-accent font-display-h1 z-[11] leading-none'>B.</motion.a>
+            className='text-display-h1 text-accent font-display-h1 z-[1001] leading-none'>B.</motion.a>
           </div>
 
         {/* DESKTOP NAV */}
@@ -70,7 +70,7 @@ const Navigation = () => {
         </div>
 
         {/* MOBILE HAMBURGER */}
-        <div className="md:hidden w-[2.9rem] h-[2.9rem] rounded-[0.9rem] bg-accent flex justify-center items-center" onClick={() => setIsOpen(!isOpen)}> 
+        <div className="md:hidden w-[2.9rem] h-[2.9rem] rounded-[0.9rem] bg-accent flex justify-center items-center z-10" onClick={() => setIsOpen(!isOpen)}> 
           { isOpen ? (
               <IoClose className='icon'/>
             ) :
@@ -86,7 +86,7 @@ const Navigation = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed top-0 right-0 w-2/3 h-screen bg-black/10 backdrop-blur-lg flex flex-col items-center justify-center gap-6 text-white md:hidden z-[10]"
+              className="fixed top-0 right-0 w-2/3 h-screen bg-black/10 backdrop-blur-lg flex flex-col items-center justify-center gap-6 text-white md:hidden z-[100]"
             >
               {navLinks.map((link) => (
                 <a key={link.labelKey}
@@ -98,11 +98,14 @@ const Navigation = () => {
                   {t(link.labelKey)}
                 </a>
               ))}
+              <div className="languageBox">
+                <LocaleSwitcher />
+              </div>
               <a href="./cv/BučákDominik.pdf" download className="hover:text-ink flex justify-center items-center gap-[0.2rem] rounded-full bg-accent w-[6.6875rem] h-[2.4375rem]" onClick={() => setIsOpen(false)}> <RiAttachment2 /> Resume</a>
             </motion.div>
           )}
         </AnimatePresence>
-    </div>
+      </div>
   )
 }
 
