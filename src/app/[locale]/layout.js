@@ -2,6 +2,8 @@ import { Epilogue, Lato  } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 
+import { Analytics } from '@vercel/analytics/next';
+
 const epilogue = Epilogue({
   variable: "--font-epilogue",
   subsets: ["latin"],
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
       <body className={`${epilogue.variable} ${lato.variable} antialiased`}>
         <NextIntlClientProvider>
           {children}
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
