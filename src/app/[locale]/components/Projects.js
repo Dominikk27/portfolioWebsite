@@ -47,7 +47,7 @@ const Projects = ({ section }) => {
                          sm:col-span-4 sm:grid-cols-2
                          md:col-span-8 md:grid-cols-2
                          lg:col-span-12 lg:grid-cols-3
-                         xl:col-span-12 xl:grid-cols-4">
+                         xl:col-span-12 xl:grid-cols-3">
                
                     <motion.div variants={cardsVariant}>
                          <ProjectCard projectName={t('Cards.Card1.title')}

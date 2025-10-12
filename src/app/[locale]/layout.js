@@ -19,6 +19,7 @@ const lato = Lato({
 export const metadata = {
   title: "Dominik Bučák | Portfolio",
   description: "Dominik Bučák | Portfolio",
+  keywords: ["dev", "web-dev", "web dev", "tvorba webu", "programming"]
 };
 
 export default function RootLayout({ children }) {
