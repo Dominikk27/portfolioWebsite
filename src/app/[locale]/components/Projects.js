@@ -50,12 +50,12 @@ const Projects = ({ section }) => {
                          xl:col-span-12 xl:grid-cols-3">
                     
                     <motion.div variants={cardsVariant}>
-                         <ProjectCard projectName={t('Cards.Card1.title')}
-                         projectImage="./projects/ecomm.png"
-                         projectDescription={t('Cards.Card1.description')}
+                         <ProjectCard projectName={t('Cards.Card7.title')}
+                         projectImage="./projects/ecomm2.png"
+                         projectDescription={t('Cards.Card7.description')}
                          projectTechnologies={["react", "node", "mongo"]}
-                         projectLink={t('Cards.Card1.showcase')}
-                         repoLink={t('Cards.Card1.repo')}/>
+                         projectLink={t('Cards.Card7.showcase')}
+                         repoLink={t('Cards.Card7.repo')}/>
                     </motion.div>
                               
                     <motion.div variants={cardsVariant}>
