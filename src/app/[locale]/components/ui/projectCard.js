@@ -1,5 +1,5 @@
 import React from 'react'
-import {UnityIcon, ReactIcon, NodeIcon, MongoIcon, PythonIcon, MysqlIcon, OpencvIcon, FirebaseIcon, ArduinoIcon, AndroidStudioIcon} from '@/app/[locale]/components/svg/icons';
+import {UnityIcon, ReactIcon, NodeIcon, MongoIcon, PythonIcon, MysqlIcon, OpencvIcon, FirebaseIcon, ArduinoIcon, AndroidStudioIcon, PHPIcon, TailwindIcon} from '@/app/[locale]/components/svg/icons';
 
 import { AiOutlineEye } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
@@ -16,6 +16,8 @@ const IconMap = {
     android: AndroidStudioIcon,
     arduino: ArduinoIcon,
     firebase: FirebaseIcon,
+    tailwind: TailwindIcon,
+    php: PHPIcon
 };
 
 const ProjectCard = ({ projectImage, projectName, projectDescription, projectTechnologies, repoLink, projectLink, }) => {

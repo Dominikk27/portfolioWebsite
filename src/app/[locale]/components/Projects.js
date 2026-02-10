@@ -53,7 +53,7 @@ const Projects = ({ section }) => {
                          <ProjectCard projectName={t('Cards.Card7.title')}
                          projectImage="./projects/ecomm2.png"
                          projectDescription={t('Cards.Card7.description')}
-                         projectTechnologies={["react", "node", "mongo"]}
+                         projectTechnologies={["php","tailwind", "mysql"]}
                          projectLink={t('Cards.Card7.showcase')}
                          repoLink={t('Cards.Card7.repo')}/>
                     </motion.div>
